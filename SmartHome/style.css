@@ -1,0 +1,260 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table{
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+input{
+	outline: none;
+}
+button{
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+header img{
+	width: 100%;
+	display: block;
+	border-top: 2px solid gray;
+	border-bottom: 2px solid gray;
+}
+body{
+  min-height: 100%;
+  height: 100%;
+	background: url(img/brick-wall.jpg) no-repeat fixed;
+	width: 100%;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+main{
+	padding-top: 30px;
+}
+.title{
+	font:600 17px sans-serif; 
+	text-align: center;
+	color: #0188c8;
+	text-transform: uppercase;
+	padding: 5px 0;
+}
+
+#device_control{
+	display: table;
+	margin: 0 auto 20px auto;
+}
+.floating{
+	float:left;
+	position: relative;
+}
+#device_control button{
+	font: 600 22px sans-serif;
+	font-weight: 700;
+  color: white;
+  width: 200px;
+	padding: 15px 0 15px 0;
+  border-radius: 5px;
+  background: #249ed8;
+  box-shadow: 0 -5px #0188c8 inset;
+  transition: 0.5s;
+  margin: 0 15px;
+}
+
+#device_control button:hover{
+	background: #0188c8;
+}
+/***carousel***/
+.carousel{
+	width: 200px;
+	overflow: hidden;
+	display: inline-block;
+}
+.carousel_wrapper{
+	display:inline-block;
+	padding: 5px 30px;
+	background: rgba(226, 221, 218, 0.83);
+	border: 2px solid gray;
+	border-radius : 5px;
+}
+.carousel_list{
+	padding: 0;
+	transition: margin-left 250ms;
+	width: 99999px;
+	overflow: hidden;
+	display: block;
+}
+.carousel_list li{
+	width: 100px;
+	float: left;
+	padding-right: 5px;
+	cursor: pointer;
+}
+.carousel_list li img{
+	display: block;
+	width: 100%;
+}
+
+.arr{
+	font: 600 50px sans-serif;
+	color: #0188c8;
+	position: absolute;
+	top: -10px;
+	cursor: pointer;
+}
+.next{
+	right: 5px;
+}
+.prev{
+	left: 5px;
+}
+.choosed img{
+	border: 2px solid #0188c8;
+	border-radius: 50%;
+}
+/***devices***/
+#device{
+	padding-top: 50px;
+	display: none;
+	
+}
+.device{
+	float: left;
+	margin-bottom: 15px;
+}
+.device img{
+	max-width: 150px;
+	display: block;
+	margin: 0 auto;
+}
+.object_device{
+	width: 210px;
+	position: relative;
+}
+.turn_btn{
+	width: 50px;
+	height: 50px;
+	display: table;
+	margin: 0 auto;
+}
+.on{
+	background: url(img/btn_on.png) no-repeat;
+	background-size: contain;
+}
+.off{
+	background: url(img/btn_off.png) no-repeat;
+	background-size: contain;
+}
+.panel_control{
+	width: 316px;
+	height: 415px;
+	background: url(img/control.png) no-repeat;
+	background-size: cover;
+	padding-top: 15px;
+}
+
+/***notification***/
+.notification{
+	width: 185px;
+	height: 60px;
+	background: rgba(226, 221, 218, 0.83);
+	border: 2px solid gray;
+	border-radius : 5px;
+	margin: 10px auto;
+}
+
+.notification p{
+	text-align: center;
+	font: 600 17px sans-serif;
+	color: #0188c8;
+	padding-top: 15px;
+}
+/**volume***/
+.qty-wrapper{
+	display: table;
+	margin: 0 auto;
+}
+.qty-container {
+  display: inline-block;
+  border: 1px solid #E0E0E0;
+  border-radius: 3px;
+  max-width: 146px;
+}
+.quantity{
+  width: 3em;
+  height: 37px;
+  border: none;
+  background: #EDEDED;
+}
+.qty {
+  height: 30px;
+  width: 4em;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 -4px 0 -3px;
+  border: none;
+}
+.setted_value{
+	border: 1px solid #E0E0E0;
+	border-radius: 3px;
+	background: #EDEDED;
+}
+.red_btn{
+	background: none;
+	border: 2px solid red;
+	color: red;
+	height: 30px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+.remove_device{
+	display: table;
+	margin: 0 auto;
+}

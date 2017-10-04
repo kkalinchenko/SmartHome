@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel='stylesheet' href='style.css'>
+	<script src='js/carousel.js'></script>
+	<script src ='js/type_selection.js'></script>
+	<script src='js/models/base.js'></script>
+	<script src='js/models/media.js'></script>
+	<script src='js/models/tv.js'></script>
+	<script src='js/models/radio.js'></script>
+	<script src='js/models/lamp.js'></script>
+	<script src='js/models/modelsManager.js'></script>
+	<script>
+		window.onload = function() {
+			carouselInit();
+			selectType();
+			managerInit();
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<img src="img/banner.jpg">
+	</header>	
+	<main>
+		<div id='device_control'>
+			<div class='carousel_wrapper floating'>
+				<h5 class='title'>Choose device</h5>
+				<div class='carousel'>
+					<ul class='carousel_list'>
+						<li class='active choosed' data-type='tv'><img src="img/tv_icon.ico" alt="tv"></li>
+						<li data-type='radio'><img src='img/radio_icon.ico'></li>
+						<li data-type='lamp'><img src='img/lamp_icon.png'></li>
+					</ul>
+				</div>
+				<span class='next arr'>&#8250</span>
+				<span class='prev arr'>&#8249</span>
+		</div>
+			<div class='addPosition floating'>
+				<button type='button' class='add_btn'>ADD device</button>
+			</div>
+		</div>	
+		<div id='device_container'>
+			<ul class='tv_container'></ul>
+			<ul class='radio_container'></ul>
+			<ul class='lamp_container'></ul>
+		</div>
+
+			<ul id='device'>
+				<li class='device_tv device'>
+					<div class='object_device floating'>
+						<img src="img/tv.png">
+						<div class='notification'>
+							<p class='text'>Notification</p>
+						</div>
+					</div>
+					<div class='panel_control floating'>
+						<h5 class='title'>ON/OFF</h5>
+						<button type='button' class='turn_btn off'></button>
+						<h5 class='title'>Volume</h5>
+						<div class='qty-wrapper volume'>
+							<div class="qty-container">
+	              <button type="button" value="0" class="decrease quantity btn_disable">-</button>
+	              <input type="text" class="qty_volume qty">
+	              <button type="button" value="1" class="increase quantity btn_disable">+</button>
+	            </div>
+            </div>
+            <h5 class='title'>Chanel</h5>
+            <div class='qty-wrapper channel'>
+							<div class="qty-container">
+	              <button type="button" value="0" class="prev_channel quantity btn_disable">prev</button>
+	              <input type="text" class="qty_channel qty">
+	              <button type="button" value="1" class="next_channel quantity btn_disable">next</button>
+	            </div>
+            </div>
+            <h5 class='title'>Auto turn off</h5>
+            <div class ='auto_off qty-wrapper'>
+            	<input type='text' class='qty setted_value' placeholder="seconds"/>
+            	<button type='button' class='set_timer_value red_btn btn_disable'>OFF</button>
+            </div>
+            <h5 class='title'>Removing</h5>
+            <button type='button' class='remove_device red_btn'>REMOVE TV</button>
+					</div>
+				</li>
+				<li class='device_radio device'>
+					<div class='object_device floating'>
+						<img src='img/radio.png'>
+						<div class='notification'>
+							<p class='text'>Notification</p>
+						</div>
+					</div>
+					<div class='panel_control floating'>
+						<h5 class='title'>ON/OFF</h5>
+						<button type='button' class='turn_btn off'></button>
+						<h5 class='title'>Volume</h5>
+						<div class='qty-wrapper volume'>
+							<div class="qty-container">
+	              <button type="button" value="0" class="decrease quantity btn_disable">-</button>
+	              <input type="text" class="qty_volume qty">
+	              <button type="button" value="1" class="increase quantity btn_disable">+</button>
+	            </div>
+            </div>
+            <h5 class='title'>Chanel</h5>
+            <div class='qty-wrapper channel'>
+							<div class="qty-container">
+	              <button type="button" value="0" class="prev_channel quantity btn_disable">prev</button>
+	              <input type="text" class="qty_channel qty">
+	              <button type="button" value="1" class="next_channel quantity btn_disable">next</button>
+	            </div>
+            </div>
+            <h5 class='title'>Removing</h5>
+            <button type='button' class='remove_device red_btn'>REMOVE RADIO</button>
+					</div>
+				</li>
+				<li class='device_lamp device'>
+					<div class='object_device floating'>
+						<img src='img/lamp.png'>
+						<div class='notification'>
+							<p class='text'>Notification</p>
+						</div>
+					</div>
+					<div class='panel_control floating'>
+						<h5 class='title'>ON/OFF</h5>
+						<button type='button' class='turn_btn off'></button>
+            <h5 class='title'>Removing</h5>
+            <button type='button' class='remove_device red_btn'>REMOVE LAMP</button>
+					</div>
+				</li>
+			</ul>
+	</main>		
+
+</body>
+</html>
