@@ -2,23 +2,8 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Smart Home</title>
 	<link rel='stylesheet' href='style.css'>
-	<script src='js/carousel.js'></script>
-	<script src ='js/type_selection.js'></script>
-	<script src='js/models/base.js'></script>
-	<script src='js/models/media.js'></script>
-	<script src='js/models/tv.js'></script>
-	<script src='js/models/radio.js'></script>
-	<script src='js/models/lamp.js'></script>
-	<script src='js/models/modelsManager.js'></script>
-	<script>
-		window.onload = function() {
-			carouselInit();
-			selectType();
-			managerInit();
-		}
-	</script>
 </head>
 <body>
 	<header>
@@ -130,6 +115,24 @@
 				</li>
 			</ul>
 	</main>		
-
+<script src='js/carousel.js'></script>
+<script src='js/typeSelection.js'></script>
+<script src='js/models/base.js'></script>
+<script src='js/models/media.js'></script>
+<script src='js/models/tv.js'></script>
+<script src='js/models/radio.js'></script>
+<script src='js/models/lamp.js'></script>
+<script src='js/constructorsManager.js'></script>
+<script src='js/modelsManager.js'></script>
+<script src='js/domManager.js'></script>
+<script src='js/tvManager.js'></script>
+<script src='js/radioManager.js'></script>
+<script src='js/lampManager.js'></script>
+<script>
+	window.onload = function() {
+		carouselInit();
+		selectType();
+	}
+</script>
 </body>
 </html>
