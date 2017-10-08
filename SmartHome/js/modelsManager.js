@@ -69,6 +69,8 @@ function subcriberTvTimer () {
 }
 
 function removeObject () {
+    this.removeStateChangeListeners();
+    
     for (var i = 0; i < objects.length; i++) {
         if (this === objects[i]) {
             objects.splice(i, 1);

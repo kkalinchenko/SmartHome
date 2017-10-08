@@ -22,19 +22,28 @@ Base.prototype = (function () {
         },
         addStateChangeListener: function (property, listener) {
             listeners.push({
+                instance: this,
                 property: property,
                 callback: listener
             });
+
         },
         raiseStateChangeEvent: function (property) {
             var self = this;
             listeners.forEach(function (listener) {
                 setTimeout(function () {
-                        if(property === listener.property){
+                        if(property === listener.property && self === listener.instance){
                             listener.callback.call(self);
                         }
                 }, 0)
             });
+        },
+        removeStateChangeListeners : function () {
+            var self = this;
+            
+            listeners = listeners.filter(function(listener) {
+                return listener.instance !== self;
+            })
         }
     }
 })();
