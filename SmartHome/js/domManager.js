@@ -56,7 +56,7 @@ function redrawChannelState(domElement, state){
 
 function redrawTimerState (domElement, timerValue) {
     var notification = getNotification(domElement);
-     notification.querySelector('.text').innerHTML = timerValue;
+    notification.querySelector('.text').innerHTML = timerValue;
 }
 
 function removeObjectFromDom (i) {
